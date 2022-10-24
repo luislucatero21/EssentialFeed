@@ -14,8 +14,8 @@
             filePath = "EssentialFeedTests/Feed API/URLSessionHTTPClientTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "startLoading()"
             landmarkType = "7">
             <Locations>
