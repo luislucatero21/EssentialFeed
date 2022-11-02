@@ -84,7 +84,11 @@ final class URLSessionHTTPClientTests: XCTestCase {
         return sut
     }
 
-    private func resultErrorFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> Error? {
+    private func resultErrorFor(data: Data?,
+                                response: URLResponse?,
+                                error: Error?,
+                                file: StaticString = #file,
+                                line: UInt = #line) -> Error? {
         let result = resultFor(data: data, response: response, error: error, file: file, line: line)
 
         switch result {
@@ -96,7 +100,11 @@ final class URLSessionHTTPClientTests: XCTestCase {
         }
     }
 
-    private func resultValuesFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
+    private func resultValuesFor(data: Data?,
+                                 response: URLResponse?,
+                                 error: Error?,
+                                 file: StaticString = #file,
+                                 line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
         let result = resultFor(data: data, response: response, error: error, file: file, line: line)
 
         switch result {
@@ -108,7 +116,11 @@ final class URLSessionHTTPClientTests: XCTestCase {
         }
     }
 
-    private func resultFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> HTTPClientResult {
+    private func resultFor(data: Data?,
+                           response: URLResponse?,
+                           error: Error?,
+                           file: StaticString = #file,
+                           line: UInt = #line) -> HTTPClientResult {
         URLProtocolStub.stub(data: data, response: response, error: error)
         let sut = makeSUT(file: file, line: line)
         let exp = expectation(description: "Wait for completon")
@@ -143,21 +155,21 @@ final class URLSessionHTTPClientTests: XCTestCase {
         return URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
     }
 
-    private func assertEqualErrors(_ errorL: NSError?, _ errorR: NSError?, file: StaticString = #file, line: UInt = #line) {
+    private func assertEqualErrors(_ errorL: NSError?,
+                                   _ errorR: NSError?,
+                                   file: StaticString = #file,
+                                   line: UInt = #line) {
         let errorMessage = "Expected error: \(String(describing: errorL)), got \(String(describing: errorR)) instead"
         XCTAssertEqual(errorL?.domain, errorR?.domain, errorMessage, file: file, line: line)
         XCTAssertEqual(errorL?.code, errorR?.code, errorMessage, file: file, line: line)
     }
+}
 
+// MARK: - URLProtocolStub
+extension URLSessionHTTPClientTests {
     private final class URLProtocolStub: URLProtocol {
         private static var stub: Stub?
         private static var requestObserver: ((URLRequest) -> Void)?
-
-        private struct Stub {
-            let data: Data?
-            let response: URLResponse?
-            let error: Error?
-        }
 
         static func stub(data: Data?, response: URLResponse?, error: Error?) {
             stub = Stub(data: data, response: response, error: error)
@@ -205,5 +217,14 @@ final class URLSessionHTTPClientTests: XCTestCase {
         }
 
         override func stopLoading() {}
+    }
+}
+
+// MARK: - URLProtocolStub.Stub
+extension URLSessionHTTPClientTests {
+    private struct Stub {
+        let data: Data?
+        let response: URLResponse?
+        let error: Error?
     }
 }
