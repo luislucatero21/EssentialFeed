@@ -154,15 +154,6 @@ final class URLSessionHTTPClientTests: XCTestCase {
     private func nonHTTPURLResponse() -> URLResponse {
         return URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
     }
-
-    private func assertEqualErrors(_ errorL: NSError?,
-                                   _ errorR: NSError?,
-                                   file: StaticString = #file,
-                                   line: UInt = #line) {
-        let errorMessage = "Expected error: \(String(describing: errorL)), got \(String(describing: errorR)) instead"
-        XCTAssertEqual(errorL?.domain, errorR?.domain, errorMessage, file: file, line: line)
-        XCTAssertEqual(errorL?.code, errorR?.code, errorMessage, file: file, line: line)
-    }
 }
 
 // MARK: - URLProtocolStub
