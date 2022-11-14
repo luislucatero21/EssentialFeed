@@ -17,13 +17,13 @@
 		8AA585C1290F8DE300E7DD7D /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22B8A429078A1D009C86C4 /* XCTestCase+MemoryLeakTracking.swift */; };
 		8AABBF1928F5212600373419 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AABBF0E28F5212600373419 /* EssentialFeed.framework */; };
 		8AABBF1F28F5212600373419 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AABBF1128F5212600373419 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AABBF2928F521BB00373419 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABBF2828F521BB00373419 /* FeedItem.swift */; };
+		8AABBF2928F521BB00373419 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABBF2828F521BB00373419 /* FeedImage.swift */; };
 		8AABBF2B28F5246D00373419 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABBF2A28F5246D00373419 /* FeedLoader.swift */; };
 		8AABBF2E28F52AE000373419 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABBF2D28F52AE000373419 /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		8AF7EC072921B2900022B0AB /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7EC062921B2900022B0AB /* LocalFeedLoader.swift */; };
 		8AF7EC092921B33A0022B0AB /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7EC082921B33A0022B0AB /* FeedStore.swift */; };
 		8AF7EC0B292205AB0022B0AB /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7EC0A292205AB0022B0AB /* RemoteFeedItem.swift */; };
-		8AF7EC0D292206150022B0AB /* LocalFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7EC0C292206150022B0AB /* LocalFeedItem.swift */; };
+		8AF7EC0D292206150022B0AB /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7EC0C292206150022B0AB /* LocalFeedImage.swift */; };
 		8AF7FC8D28FF8166001030AE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7FC8C28FF8166001030AE /* HTTPClient.swift */; };
 		8AF7FC8F28FF81F3001030AE /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF7FC8E28FF81F3001030AE /* FeedItemMapper.swift */; };
 /* End PBXBuildFile section */
@@ -56,13 +56,13 @@
 		8AABBF0E28F5212600373419 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AABBF1128F5212600373419 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		8AABBF1828F5212600373419 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AABBF2828F521BB00373419 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		8AABBF2828F521BB00373419 /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
 		8AABBF2A28F5246D00373419 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		8AABBF2D28F52AE000373419 /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		8AF7EC062921B2900022B0AB /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		8AF7EC082921B33A0022B0AB /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		8AF7EC0A292205AB0022B0AB /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
-		8AF7EC0C292206150022B0AB /* LocalFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedItem.swift; sourceTree = "<group>"; };
+		8AF7EC0C292206150022B0AB /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		8AF7FC8C28FF8166001030AE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8AF7FC8E28FF81F3001030AE /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,7 +174,7 @@
 		8AABBF2C28F5262700373419 /* Feed Feature */ = {
 			isa = PBXGroup;
 			children = (
-				8AABBF2828F521BB00373419 /* FeedItem.swift */,
+				8AABBF2828F521BB00373419 /* FeedImage.swift */,
 				8AABBF2A28F5246D00373419 /* FeedLoader.swift */,
 			);
 			path = "Feed Feature";
@@ -185,7 +185,7 @@
 			children = (
 				8AF7EC082921B33A0022B0AB /* FeedStore.swift */,
 				8AF7EC062921B2900022B0AB /* LocalFeedLoader.swift */,
-				8AF7EC0C292206150022B0AB /* LocalFeedItem.swift */,
+				8AF7EC0C292206150022B0AB /* LocalFeedImage.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					8A04B08C290F7D2500804A12 = {
 						CreatedOnToolsVersion = 14.0;
@@ -350,12 +350,12 @@
 				8A574BBE28F9EC09007952DF /* RemoteFeedLoader.swift in Sources */,
 				8AF7EC0B292205AB0022B0AB /* RemoteFeedItem.swift in Sources */,
 				8AF7FC8D28FF8166001030AE /* HTTPClient.swift in Sources */,
-				8AF7EC0D292206150022B0AB /* LocalFeedItem.swift in Sources */,
+				8AF7EC0D292206150022B0AB /* LocalFeedImage.swift in Sources */,
 				8AF7EC092921B33A0022B0AB /* FeedStore.swift in Sources */,
 				8AF7EC072921B2900022B0AB /* LocalFeedLoader.swift in Sources */,
 				8AABBF2B28F5246D00373419 /* FeedLoader.swift in Sources */,
 				8AF7FC8F28FF81F3001030AE /* FeedItemMapper.swift in Sources */,
-				8AABBF2928F521BB00373419 /* FeedItem.swift in Sources */,
+				8AABBF2928F521BB00373419 /* FeedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +391,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -406,6 +407,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -450,6 +452,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -513,6 +516,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -541,6 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -569,6 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -597,6 +603,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -613,6 +620,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = XDKPNCF57N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
