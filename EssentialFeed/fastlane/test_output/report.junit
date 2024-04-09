@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='EssentialFeedCacheIntegrationTests.xctest' tests='59' failures='0'>
+  <testsuite name='EssentialFeedTests.CoreDataFeedStoreTests' tests='12' failures='0'>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_retrieve_deliversEmptyOnEmptyCache' time='0.062'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_storeSideEffects_runSerially' time='0.037'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_delete_deliversNoErrorOnNonEmptyCache' time='0.025'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_insert_deliversNoErrorOnEmptyCache' time='0.021'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_delete_hasNoSideEffectsOnEmptyCache' time='0.013'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_delete_emptiesPreviouslyInsertedCache' time='0.028'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_retrieve_hasNoSideEffectsOnEmptyCache' time='0.012'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_delete_deliversNoErrorOnEmptyCache' time='0.008'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_insert_deliversNoErrorOnNonEmptyCache' time='0.017'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_retrieve_hasNoSideEffectsOnNonEmptyCache' time='0.017'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_retrieve_deliversFoundValuesOnNonEmptyCache' time='0.019'/>
+    <testcase classname='EssentialFeedTests.CoreDataFeedStoreTests' name='test_insert_overridesPreviouslyInsertedCacheValues' time='0.026'/>
+  </testsuite>
+  <testsuite name='EssentialFeedTests.URLSessionHTTPClientTests' tests='5' failures='0'>
+    <testcase classname='EssentialFeedTests.URLSessionHTTPClientTests' name='test_getFromURL_performsGETRequestWithURL' time='0.059'/>
+    <testcase classname='EssentialFeedTests.URLSessionHTTPClientTests' name='test_getFromURL_suceedsOnHTTPResponseWithData' time='0.009'/>
+    <testcase classname='EssentialFeedTests.URLSessionHTTPClientTests' name='test_getFromURL_failsOnRequestError' time='0.008'/>
+    <testcase classname='EssentialFeedTests.URLSessionHTTPClientTests' name='test_getFromURL_suceedsWithEmptyDataOnHTTPResponseWithNilData' time='0.006'/>
+    <testcase classname='EssentialFeedTests.URLSessionHTTPClientTests' name='test_getFromURL_failsOnAllInvalidRepresentationCases' time='0.041'/>
+  </testsuite>
+  <testsuite name='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' tests='9' failures='0'>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_requestsDataFromURL' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated' time='0.004'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_deliversErrorOnNon200HTTPResponse' time='0.009'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_loadTwice_requestsDataFromURLTwice' time='0.004'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_deliversItemsOn200HTTPResponseWithJSONItems' time='0.008'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_init_doesNotRequestDataFromURL' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList' time='0.007'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_deliversErrorOn200HTTPResponseWithInvalidJSON' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromRemoteUseCaseTests' name='test_load_deliversErrorOnClientError' time='0.005'/>
+  </testsuite>
+  <testsuite name='EssentialFeedTests.ValidateFeedCacheUseCaseTests' tests='7' failures='0'>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_init_doesNotMessageStoreUponCreation' time='0.004'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_doesNotDeleteNonExpiredCache' time='0.006'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_deletesCacheOnRetrievalError' time='0.004'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_deletesExpiredCache' time='0.005'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_doesNotDeleteInvalidCacheAfterSUTInstanceHasBeenDeallocated' time='0.004'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_doesNotDeleteCacheOnEmptyCache' time='0.004'/>
+    <testcase classname='EssentialFeedTests.ValidateFeedCacheUseCaseTests' name='test_validateCache_deletesCacheOnExpiration' time='0.004'/>
+  </testsuite>
+  <testsuite name='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' tests='13' failures='0'>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_hasNoSideEffectsOnExpiredCache' time='0.008'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_hasNoSideEffectsOnEmptyCache' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_requestsCacheRetrieval' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_deliversNoImagesOnExpiredCache' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_init_doesNotMessageStoreUponCreation' time='0.004'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_failsOnRetrievalError' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_deliversNoImagesOnCacheExpiration' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_hasNoSideEffectsOnNonExpiredCache' time='0.004'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_deliversNoImagesOnEmptyCache' time='0.006'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated' time='0.003'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_hasNoSideEffectsOnCacheExpiration' time='0.005'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_hasNoSideEffectsOnRetrievalError' time='0.004'/>
+    <testcase classname='EssentialFeedTests.LoadFeedFromCacheUseCaseTests' name='test_load_deliversCachedImagesOnNonExpiredCache' time='0.005'/>
+  </testsuite>
+  <testsuite name='EssentialFeedTests.CacheFeedUseCaseTests' tests='9' failures='0'>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_failsOnDeletionError' time='0.006'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated' time='0.003'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_requestsCacheDeletion' time='0.005'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_doesNotRequestCacheInsertionOnDeletionError' time='0.005'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion' time='0.005'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_init_doesNotMessageStoreUponCreation' time='0.004'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated' time='0.003'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_successOnSuccessfulCacheInsertion' time='0.007'/>
+    <testcase classname='EssentialFeedTests.CacheFeedUseCaseTests' name='test_save_failsOnInsertionError' time='0.005'/>
+  </testsuite>
+  <testsuite name='EssentialFeedAPIEndToEndTests.EssentialFeedAPIEndToEndTests' tests='1' failures='0'>
+    <testcase classname='EssentialFeedAPIEndToEndTests.EssentialFeedAPIEndToEndTests' name='test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData' time='2.209'/>
+  </testsuite>
+  <testsuite name='EssentialFeedCacheIntegrationTests.EssentialFeedCacheIntegrationTests' tests='3' failures='0'>
+    <testcase classname='EssentialFeedCacheIntegrationTests.EssentialFeedCacheIntegrationTests' name='test_load_deliversItemsSavedOnASeparateInstance' time='0.050'/>
+    <testcase classname='EssentialFeedCacheIntegrationTests.EssentialFeedCacheIntegrationTests' name='test_load_deliversNoItemsOnEmptyCache' time='0.009'/>
+    <testcase classname='EssentialFeedCacheIntegrationTests.EssentialFeedCacheIntegrationTests' name='test_save_overridesItemsSavedOnASeparateInstance' time='0.024'/>
+  </testsuite>
+</testsuites>
