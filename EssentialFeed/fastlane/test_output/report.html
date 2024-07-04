@@ -121,209 +121,87 @@
     <section id="test-suites">
       
         
-        <section class="test-suite passing" id="EssentialFeedTests.CoreDataFeedStoreTests">
+        <section class="test-suite passing" id="EssentialFeedTests.ValidateFeedCacheUseCaseTests">
           <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">EssentialFeedTests.CoreDataFeedStoreTests</h3>
+            <h3 class="title">EssentialFeedTests.ValidateFeedCacheUseCaseTests</h3>
           </section>
           <section class="tests">
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_retrieve_deliversEmptyOnEmptyCache');">
-                <td>
-                  
-                    <h3 class="time">0.062s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_retrieve_deliversEmptyOnEmptyCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_storeSideEffects_runSerially');">
-                <td>
-                  
-                    <h3 class="time">0.037s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_storeSideEffects_runSerially</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_delete_deliversNoErrorOnNonEmptyCache');">
-                <td>
-                  
-                    <h3 class="time">0.025s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_delete_deliversNoErrorOnNonEmptyCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_insert_deliversNoErrorOnEmptyCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_validateCache_doesNotDeleteNonExpiredCache');">
                 <td>
                   
                     <h3 class="time">0.021s</h3>
                   
                 </td>
-                <td><h3 class="title">test_insert_deliversNoErrorOnEmptyCache</h3></td>
+                <td><h3 class="title">test_validateCache_doesNotDeleteNonExpiredCache</h3></td>
               </tr>
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_delete_hasNoSideEffectsOnEmptyCache');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_validateCache_deletesCacheOnExpiration');">
                 <td>
                   
                     <h3 class="time">0.013s</h3>
                   
                 </td>
-                <td><h3 class="title">test_delete_hasNoSideEffectsOnEmptyCache</h3></td>
+                <td><h3 class="title">test_validateCache_deletesCacheOnExpiration</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_delete_emptiesPreviouslyInsertedCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_validateCache_doesNotDeleteCacheOnEmptyCache');">
                 <td>
                   
-                    <h3 class="time">0.028s</h3>
+                    <h3 class="time">0.004s</h3>
                   
                 </td>
-                <td><h3 class="title">test_delete_emptiesPreviouslyInsertedCache</h3></td>
+                <td><h3 class="title">test_validateCache_doesNotDeleteCacheOnEmptyCache</h3></td>
               </tr>
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_retrieve_hasNoSideEffectsOnEmptyCache');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
                 <td>
                   
-                    <h3 class="time">0.012s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
-                <td><h3 class="title">test_retrieve_hasNoSideEffectsOnEmptyCache</h3></td>
+                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_delete_deliversNoErrorOnEmptyCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_validateCache_deletesCacheOnRetrievalError');">
                 <td>
                   
-                    <h3 class="time">0.008s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
-                <td><h3 class="title">test_delete_deliversNoErrorOnEmptyCache</h3></td>
+                <td><h3 class="title">test_validateCache_deletesCacheOnRetrievalError</h3></td>
               </tr>
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_insert_deliversNoErrorOnNonEmptyCache');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_validateCache_doesNotDeleteInvalidCacheAfterSUTInstanceHasBeenDeallocated');">
                 <td>
                   
-                    <h3 class="time">0.017s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
-                <td><h3 class="title">test_insert_deliversNoErrorOnNonEmptyCache</h3></td>
+                <td><h3 class="title">test_validateCache_doesNotDeleteInvalidCacheAfterSUTInstanceHasBeenDeallocated</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_retrieve_hasNoSideEffectsOnNonEmptyCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_validateCache_deletesExpiredCache');">
                 <td>
                   
-                    <h3 class="time">0.017s</h3>
+                    <h3 class="time">0.011s</h3>
                   
                 </td>
-                <td><h3 class="title">test_retrieve_hasNoSideEffectsOnNonEmptyCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_retrieve_deliversFoundValuesOnNonEmptyCache');">
-                <td>
-                  
-                    <h3 class="time">0.019s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_retrieve_deliversFoundValuesOnNonEmptyCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_insert_overridesPreviouslyInsertedCacheValues');">
-                <td>
-                  
-                    <h3 class="time">0.026s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_insert_overridesPreviouslyInsertedCacheValues</h3></td>
-              </tr>
-              
-            
-            </table>
-          </section>
-        </section>
-      
-        
-        <section class="test-suite passing" id="EssentialFeedTests.URLSessionHTTPClientTests">
-          <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">EssentialFeedTests.URLSessionHTTPClientTests</h3>
-          </section>
-          <section class="tests">
-            <table>
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_performsGETRequestWithURL');">
-                <td>
-                  
-                    <h3 class="time">0.059s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_getFromURL_performsGETRequestWithURL</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_getFromURL_suceedsOnHTTPResponseWithData');">
-                <td>
-                  
-                    <h3 class="time">0.009s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_getFromURL_suceedsOnHTTPResponseWithData</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_failsOnRequestError');">
-                <td>
-                  
-                    <h3 class="time">0.008s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_getFromURL_failsOnRequestError</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_getFromURL_suceedsWithEmptyDataOnHTTPResponseWithNilData');">
-                <td>
-                  
-                    <h3 class="time">0.006s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_getFromURL_suceedsWithEmptyDataOnHTTPResponseWithNilData</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_failsOnAllInvalidRepresentationCases');">
-                <td>
-                  
-                    <h3 class="time">0.041s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_getFromURL_failsOnAllInvalidRepresentationCases</h3></td>
+                <td><h3 class="title">test_validateCache_deletesExpiredCache</h3></td>
               </tr>
               
             
@@ -343,7 +221,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_load_requestsDataFromURL');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.003s</h3>
                   
                 </td>
                 <td><h3 class="title">test_load_requestsDataFromURL</h3></td>
@@ -351,84 +229,7 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversErrorOnNon200HTTPResponse');">
-                <td>
-                  
-                    <h3 class="time">0.009s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversErrorOnNon200HTTPResponse</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_loadTwice_requestsDataFromURLTwice');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_loadTwice_requestsDataFromURLTwice</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversItemsOn200HTTPResponseWithJSONItems');">
-                <td>
-                  
-                    <h3 class="time">0.008s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversItemsOn200HTTPResponseWithJSONItems</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_init_doesNotRequestDataFromURL');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_init_doesNotRequestDataFromURL</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList');">
-                <td>
-                  
-                    <h3 class="time">0.007s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversErrorOn200HTTPResponseWithInvalidJSON');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversErrorOn200HTTPResponseWithInvalidJSON</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversErrorOnClientError');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversErrorOnClientError');">
                 <td>
                   
                     <h3 class="time">0.005s</h3>
@@ -438,203 +239,58 @@
               </tr>
               
             
-            </table>
-          </section>
-        </section>
-      
-        
-        <section class="test-suite passing" id="EssentialFeedTests.ValidateFeedCacheUseCaseTests">
-          <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">EssentialFeedTests.ValidateFeedCacheUseCaseTests</h3>
-          </section>
-          <section class="tests">
-            <table>
-            
               
-              <tr class="test passing "  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_validateCache_doesNotDeleteNonExpiredCache');">
-                <td>
-                  
-                    <h3 class="time">0.006s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_doesNotDeleteNonExpiredCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_validateCache_deletesCacheOnRetrievalError');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_deletesCacheOnRetrievalError</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_validateCache_deletesExpiredCache');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_deletesExpiredCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_validateCache_doesNotDeleteInvalidCacheAfterSUTInstanceHasBeenDeallocated');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_doesNotDeleteInvalidCacheAfterSUTInstanceHasBeenDeallocated</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_validateCache_doesNotDeleteCacheOnEmptyCache');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_doesNotDeleteCacheOnEmptyCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_validateCache_deletesCacheOnExpiration');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_validateCache_deletesCacheOnExpiration</h3></td>
-              </tr>
-              
-            
-            </table>
-          </section>
-        </section>
-      
-        
-        <section class="test-suite passing" id="EssentialFeedTests.LoadFeedFromCacheUseCaseTests">
-          <section class="heading" onclick="toggleTests(this);">
-            <h3 class="title">EssentialFeedTests.LoadFeedFromCacheUseCaseTests</h3>
-          </section>
-          <section class="tests">
-            <table>
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnExpiredCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_loadTwice_requestsDataFromURLTwice');">
                 <td>
                   
                     <h3 class="time">0.008s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_hasNoSideEffectsOnExpiredCache</h3></td>
+                <td><h3 class="title">test_loadTwice_requestsDataFromURLTwice</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_hasNoSideEffectsOnEmptyCache');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversErrorOn200HTTPResponseWithInvalidJSON');">
+                <td>
+                  
+                    <h3 class="time">0.010s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversErrorOn200HTTPResponseWithInvalidJSON</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList');">
                 <td>
                   
                     <h3 class="time">0.005s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_hasNoSideEffectsOnEmptyCache</h3></td>
+                <td><h3 class="title">test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList</h3></td>
               </tr>
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_load_requestsCacheRetrieval');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversErrorOnNon200HTTPResponse');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversErrorOnNon200HTTPResponse</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_init_doesNotRequestDataFromURL');">
                 <td>
                   
                     <h3 class="time">0.005s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_requestsCacheRetrieval</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversNoImagesOnExpiredCache');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversNoImagesOnExpiredCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_failsOnRetrievalError');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_failsOnRetrievalError</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversNoImagesOnCacheExpiration');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversNoImagesOnCacheExpiration</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_hasNoSideEffectsOnNonExpiredCache');">
-                <td>
-                  
-                    <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_hasNoSideEffectsOnNonExpiredCache</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversNoImagesOnEmptyCache');">
-                <td>
-                  
-                    <h3 class="time">0.006s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_load_deliversNoImagesOnEmptyCache</h3></td>
+                <td><h3 class="title">test_init_doesNotRequestDataFromURL</h3></td>
               </tr>
               
             
@@ -650,35 +306,224 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnCacheExpiration');">
+              <tr class="test passing "  onclick="toggleDetails('test_load_deliversItemsOn200HTTPResponseWithJSONItems');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.027s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_hasNoSideEffectsOnCacheExpiration</h3></td>
+                <td><h3 class="title">test_load_deliversItemsOn200HTTPResponseWithJSONItems</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="EssentialFeedTests.URLSessionHTTPClientTests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">EssentialFeedTests.URLSessionHTTPClientTests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_suceedsOnHTTPResponseWithData');">
+                <td>
+                  
+                    <h3 class="time">0.042s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_getFromURL_suceedsOnHTTPResponseWithData</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_load_hasNoSideEffectsOnRetrievalError');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_getFromURL_failsOnRequestError');">
+                <td>
+                  
+                    <h3 class="time">0.009s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_getFromURL_failsOnRequestError</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_failsOnAllInvalidRepresentationCases');">
+                <td>
+                  
+                    <h3 class="time">0.041s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_getFromURL_failsOnAllInvalidRepresentationCases</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_getFromURL_performsGETRequestWithURL');">
                 <td>
                   
                     <h3 class="time">0.004s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_hasNoSideEffectsOnRetrievalError</h3></td>
+                <td><h3 class="title">test_getFromURL_performsGETRequestWithURL</h3></td>
               </tr>
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversCachedImagesOnNonExpiredCache');">
+              <tr class="test passing "  onclick="toggleDetails('test_getFromURL_suceedsWithEmptyDataOnHTTPResponseWithNilData');">
                 <td>
                   
-                    <h3 class="time">0.005s</h3>
+                    <h3 class="time">0.006s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_deliversCachedImagesOnNonExpiredCache</h3></td>
+                <td><h3 class="title">test_getFromURL_suceedsWithEmptyDataOnHTTPResponseWithNilData</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="EssentialFeedTests.CoreDataFeedStoreTests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">EssentialFeedTests.CoreDataFeedStoreTests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_delete_emptiesPreviouslyInsertedCache');">
+                <td>
+                  
+                    <h3 class="time">0.056s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_delete_emptiesPreviouslyInsertedCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_delete_deliversNoErrorOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.010s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_delete_deliversNoErrorOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_retrieve_hasNoSideEffectsOnNonEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.017s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_retrieve_hasNoSideEffectsOnNonEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_retrieve_hasNoSideEffectsOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.009s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_retrieve_hasNoSideEffectsOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_retrieve_deliversFoundValuesOnNonEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.018s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_retrieve_deliversFoundValuesOnNonEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_retrieve_deliversEmptyOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.009s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_retrieve_deliversEmptyOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_delete_hasNoSideEffectsOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.012s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_delete_hasNoSideEffectsOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_insert_deliversNoErrorOnNonEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.026s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_insert_deliversNoErrorOnNonEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_insert_deliversNoErrorOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.011s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_insert_deliversNoErrorOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_storeSideEffects_runSerially');">
+                <td>
+                  
+                    <h3 class="time">0.015s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_storeSideEffects_runSerially</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_insert_overridesPreviouslyInsertedCacheValues');">
+                <td>
+                  
+                    <h3 class="time">0.015s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_insert_overridesPreviouslyInsertedCacheValues</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_delete_deliversNoErrorOnNonEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.013s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_delete_deliversNoErrorOnNonEmptyCache</h3></td>
               </tr>
               
             
@@ -695,51 +540,18 @@
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_save_failsOnDeletionError');">
+              <tr class="test passing "  onclick="toggleDetails('test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated');">
                 <td>
                   
-                    <h3 class="time">0.006s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
-                <td><h3 class="title">test_save_failsOnDeletionError</h3></td>
+                <td><h3 class="title">test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated</h3></td>
               </tr>
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated');">
-                <td>
-                  
-                    <h3 class="time">0.003s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_save_requestsCacheDeletion');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_save_requestsCacheDeletion</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_save_doesNotRequestCacheInsertionOnDeletionError');">
-                <td>
-                  
-                    <h3 class="time">0.005s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_save_doesNotRequestCacheInsertionOnDeletionError</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion');">
+              <tr class="test passing odd"  onclick="toggleDetails('test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion');">
                 <td>
                   
                     <h3 class="time">0.005s</h3>
@@ -750,32 +562,10 @@
               
             
               
-              <tr class="test passing odd"  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
+              <tr class="test passing "  onclick="toggleDetails('test_save_successOnSuccessfulCacheInsertion');">
                 <td>
                   
                     <h3 class="time">0.004s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing "  onclick="toggleDetails('test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated');">
-                <td>
-                  
-                    <h3 class="time">0.003s</h3>
-                  
-                </td>
-                <td><h3 class="title">test_save_doesNotDeliverInsertionErrorAfterSUTInstanceHasBeenDeallocated</h3></td>
-              </tr>
-              
-            
-              
-              <tr class="test passing odd"  onclick="toggleDetails('test_save_successOnSuccessfulCacheInsertion');">
-                <td>
-                  
-                    <h3 class="time">0.007s</h3>
                   
                 </td>
                 <td><h3 class="title">test_save_successOnSuccessfulCacheInsertion</h3></td>
@@ -783,13 +573,223 @@
               
             
               
+              <tr class="test passing odd"  onclick="toggleDetails('test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_save_doesNotDeliverDeletionErrorAfterSUTInstanceHasBeenDeallocated</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_save_failsOnDeletionError');">
+                <td>
+                  
+                    <h3 class="time">0.007s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_save_failsOnDeletionError</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_save_doesNotRequestCacheInsertionOnDeletionError');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_save_doesNotRequestCacheInsertionOnDeletionError</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_save_requestsCacheDeletion');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_save_requestsCacheDeletion</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
+              </tr>
+              
+            
+              
               <tr class="test passing "  onclick="toggleDetails('test_save_failsOnInsertionError');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_save_failsOnInsertionError</h3></td>
+              </tr>
+              
+            
+            </table>
+          </section>
+        </section>
+      
+        
+        <section class="test-suite passing" id="EssentialFeedTests.LoadFeedFromCacheUseCaseTests">
+          <section class="heading" onclick="toggleTests(this);">
+            <h3 class="title">EssentialFeedTests.LoadFeedFromCacheUseCaseTests</h3>
+          </section>
+          <section class="tests">
+            <table>
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnRetrievalError');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_hasNoSideEffectsOnRetrievalError</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversNoImagesOnCacheExpiration');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversNoImagesOnCacheExpiration</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnNonExpiredCache');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_hasNoSideEffectsOnNonExpiredCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_init_doesNotMessageStoreUponCreation');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_init_doesNotMessageStoreUponCreation</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnExpiredCache');">
                 <td>
                   
                     <h3 class="time">0.005s</h3>
                   
                 </td>
-                <td><h3 class="title">test_save_failsOnInsertionError</h3></td>
+                <td><h3 class="title">test_load_hasNoSideEffectsOnExpiredCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_deliversCachedImagesOnNonExpiredCache');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversCachedImagesOnNonExpiredCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversNoImagesOnExpiredCache');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversNoImagesOnExpiredCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_requestsCacheRetrieval');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_requestsCacheRetrieval</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_hasNoSideEffectsOnCacheExpiration');">
+                <td>
+                  
+                    <h3 class="time">0.003s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_hasNoSideEffectsOnCacheExpiration</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_hasNoSideEffectsOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.002s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_hasNoSideEffectsOnEmptyCache</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_load_failsOnRetrievalError');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_failsOnRetrievalError</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_load_deliversNoImagesOnEmptyCache');">
+                <td>
+                  
+                    <h3 class="time">0.004s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_load_deliversNoImagesOnEmptyCache</h3></td>
               </tr>
               
             
@@ -809,7 +809,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData');">
                 <td>
                   
-                    <h3 class="time">2.209s</h3>
+                    <h3 class="time">2.285s</h3>
                   
                 </td>
                 <td><h3 class="title">test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData</h3></td>
@@ -829,13 +829,13 @@
             <table>
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_load_deliversItemsSavedOnASeparateInstance');">
+              <tr class="test passing "  onclick="toggleDetails('test_save_overridesItemsSavedOnASeparateInstance');">
                 <td>
                   
-                    <h3 class="time">0.050s</h3>
+                    <h3 class="time">0.075s</h3>
                   
                 </td>
-                <td><h3 class="title">test_load_deliversItemsSavedOnASeparateInstance</h3></td>
+                <td><h3 class="title">test_save_overridesItemsSavedOnASeparateInstance</h3></td>
               </tr>
               
             
@@ -843,7 +843,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_load_deliversNoItemsOnEmptyCache');">
                 <td>
                   
-                    <h3 class="time">0.009s</h3>
+                    <h3 class="time">0.007s</h3>
                   
                 </td>
                 <td><h3 class="title">test_load_deliversNoItemsOnEmptyCache</h3></td>
@@ -851,13 +851,13 @@
               
             
               
-              <tr class="test passing "  onclick="toggleDetails('test_save_overridesItemsSavedOnASeparateInstance');">
+              <tr class="test passing "  onclick="toggleDetails('test_load_deliversItemsSavedOnASeparateInstance');">
                 <td>
                   
-                    <h3 class="time">0.024s</h3>
+                    <h3 class="time">0.012s</h3>
                   
                 </td>
-                <td><h3 class="title">test_save_overridesItemsSavedOnASeparateInstance</h3></td>
+                <td><h3 class="title">test_load_deliversItemsSavedOnASeparateInstance</h3></td>
               </tr>
               
             
