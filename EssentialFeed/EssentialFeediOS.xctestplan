@@ -13,7 +13,7 @@
       "targets" : [
         {
           "containerPath" : "container:EssentialFeed.xcodeproj",
-          "identifier" : "EFE25A5E2AD04DB5006C2CDF",
+          "identifier" : "EF0A22262BDF54FD0058376B",
           "name" : "EssentialFeediOS"
         }
       ]
@@ -24,7 +24,7 @@
     {
       "target" : {
         "containerPath" : "container:EssentialFeed.xcodeproj",
-        "identifier" : "EFE25A652AD04DB6006C2CDF",
+        "identifier" : "EF0A222D2BDF54FD0058376B",
         "name" : "EssentialFeediOSTests"
       }
     }
