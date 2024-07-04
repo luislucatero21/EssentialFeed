@@ -13,7 +13,7 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
-default_platform(:ios)
+default_platform(:mac)
 
 platform :mac do
   desc "Run Mac OS tests"
@@ -21,8 +21,15 @@ platform :mac do
     run_tests(
       project: "EssentialFeed.xcodeproj",
       scheme: "CI_macOS",
-      clean: false
+      clean: false,
+      destination: "platform=macOS,arch=arm64"
     )
+  end
+
+  desc "Run all CI tests"
+  lane :all_tests do
+    macos_tests
+    sh "fastlane ios ios_tests"
   end
 end
 
@@ -32,13 +39,8 @@ platform :ios do
     run_tests(
       project: "EssentialFeed.xcodeproj",
       scheme: "CI_iOS",
+      devices: ["iPhone 15 Pro"],
       clean: false
     )
   end
-end
-
-desc "Run all CI tests"
-lane :all_tests do
-  sh "fastlane mac macos_tests"
-  sh "fastlane ios ios_tests"
 end

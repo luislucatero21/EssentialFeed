@@ -5,17 +5,22 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000384">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000175">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: fastlane mac macos_tests" time="69.341523">
+      <testcase classname="fastlane.lanes" name="1: Switch to mac macos_tests lane" time="0.000123">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: fastlane ios ios_tests" time="79.776157">
+      <testcase classname="fastlane.lanes" name="2: run_tests" time="27.559333">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: fastlane ios ios_tests" time="57.317002">
         
       </testcase>
     

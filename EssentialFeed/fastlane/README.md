@@ -13,17 +13,6 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### all_tests
-
-```sh
-[bundle exec] fastlane all_tests
-```
-
-Run all CI tests
-
-----
-
-
 ## Mac
 
 ### mac macos_tests
@@ -33,6 +22,14 @@ Run all CI tests
 ```
 
 Run Mac OS tests
+
+### mac all_tests
+
+```sh
+[bundle exec] fastlane mac all_tests
+```
+
+Run all CI tests
 
 ----
 
