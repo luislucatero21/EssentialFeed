@@ -28,13 +28,13 @@ final class FeedViewController: UITableViewController {
         super.viewIsAppearing(animated)
 
         if !viewAppeared {
-            refreshControl?.beginRefreshing()
             load()
             viewAppeared = true
         }
     }
 
     @objc private func load() {
+        refreshControl?.beginRefreshing()
         loader?.load { [weak self] _ in
             self?.refreshControl?.endRefreshing()
         }
@@ -43,71 +43,38 @@ final class FeedViewController: UITableViewController {
 
 final class FeedViewControllerTests: XCTestCase {
 
-    func test_init_doesNotLoadFeed() {
-        let (_, loader) = makeSUT()
-
-        XCTAssertEqual(loader.loadCallCount, 0)
-    }
-
-    func test_viewDidLoad_loadsView() {
+    func test_loadFeedActions_requestFeedFromLoader() {
         let (sut, loader) = makeSUT()
-        sut.simulateAppearance()
+        XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view is loaded")
 
-        XCTAssertEqual(loader.loadCallCount, 1)
-    }
-
-    func test_userInitiatedFeedReload_loadsFeed() {
-        let (sut, loader) = makeSUT()
         sut.simulateAppearance()
+        XCTAssertEqual(loader.loadCallCount, 1, "Expected a loading request once view is loaded")
 
         sut.simulateUserInitiatedFeedReload()
-        XCTAssertEqual(loader.loadCallCount, 2)
+        XCTAssertEqual(loader.loadCallCount, 2, "Expected another loading request once user initiates a load")
 
         sut.simulateUserInitiatedFeedReload()
-        XCTAssertEqual(loader.loadCallCount, 3)
+        XCTAssertEqual(loader.loadCallCount, 3, "Expected a third loading request once user initiates another load")
     }
 
-    func test_viewIsAppearing_showsLoadingIndicator() {
-        let (sut, _) = makeSUT()
+    func test_loadingFeedIndicator_isVisibleWhileLoadingFeed() {
+        let (sut, loader) = makeSUT()
 
         sut.simulateAppearance()
-        XCTAssertTrue(sut.isShowingLoadingIndicator)
-
-        sut.refreshControl?.endRefreshing()
-        sut.refreshControl?.sendActions(for: .valueChanged)
-        XCTAssertTrue(sut.isShowingLoadingIndicator)
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
 
         sut.refreshControl?.endRefreshing()
         sut.simulateAppearance()
-        XCTAssertFalse(sut.isShowingLoadingIndicator)
-    }
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator the second time the view appears")
 
-    func test_viewDidLoad_hidesLoadingIndicatorOnLoaderCompletion() {
-        let (sut, loader) = makeSUT()
-
-        sut.simulateAppearance()
-        loader.completeFeedLoading()
-
-        XCTAssertFalse(sut.isShowingLoadingIndicator)
-    }
-
-    func test_userInitiatedFeedReload_showsLoadingIndicator() {
-        let (sut, _) = makeSUT()
-        sut.simulateAppearance()
+        loader.completeFeedLoading(at: 0)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading is completed")
 
         sut.simulateUserInitiatedFeedReload()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once user initiates a reload")
 
-        XCTAssertTrue(sut.isShowingLoadingIndicator)
-    }
-
-    func test_userInitiatedFeedReload_hidesLoadingIndicatorOnLoaderCompletion() {
-        let (sut, loader) = makeSUT()
-        sut.simulateAppearance()
-
-        sut.simulateUserInitiatedFeedReload()
-        loader.completeFeedLoading()
-
-        XCTAssertFalse(sut.isShowingLoadingIndicator)
+        loader.completeFeedLoading(at: 1)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading is completed")
     }
 
     // MARK: - Helpers
@@ -131,8 +98,8 @@ final class FeedViewControllerTests: XCTestCase {
             completions.append(completion)
         }
 
-        func completeFeedLoading() {
-            completions[0](.success([]))
+        func completeFeedLoading(at index: Int) {
+            completions[index](.success([]))
         }
     }
 
@@ -190,13 +157,5 @@ private class FakeRefreshControl: UIRefreshControl {
 
     override func endRefreshing() {
         _isRefreshing = false
-    }
-
-    override func sendActions(for controlEvents: UIControl.Event) {
-        super.sendActions(for: controlEvents)
-
-        if controlEvents.contains(.valueChanged) {
-            _isRefreshing = true
-        }
     }
 }
