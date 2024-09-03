@@ -392,6 +392,7 @@ private extension FeedViewController {
         }
 
         refreshControl = fake
+        replaceRefreshControl(with: fake)
     }
 
     func numberOfRenderedFeedImageViews() -> Int {
