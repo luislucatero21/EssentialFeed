@@ -11,10 +11,6 @@ struct FeedLoadingViewModel {
     let isLoading: Bool
 }
 
-
-
-
-
 protocol FeedView {
     func display(_ viewModel: FeedViewModel)
 }
