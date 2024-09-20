@@ -14,11 +14,15 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
     }
     private var viewAppeared = false
 
-    convenience init(refreshController: FeedRefreshViewController) {
-        self.init()
+    required init?(coder: NSCoder, refreshController: FeedRefreshViewController) {
+        super.init(coder: coder)
         self.refreshController = refreshController
     }
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
