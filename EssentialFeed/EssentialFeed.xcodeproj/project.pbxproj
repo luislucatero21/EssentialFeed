@@ -71,6 +71,7 @@
 		EFC04AD5292495BB008D8211 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC04AD4292495BB008D8211 /* FeedStoreSpy.swift */; };
 		EFC4FB6629BB85C4007CF4A0 /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFC4FB6429BB85C4007CF4A0 /* FeedStore.xcdatamodeld */; };
 		EFCCB7552CA27CBB004C2AC4 /* UITableViewCell+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB7542CA27CAC004C2AC4 /* UITableViewCell+Dequeueing.swift */; };
+		EFCCB7592CA27D85004C2AC4 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB7582CA27D84004C2AC4 /* UIImageView+Animations.swift */; };
 		EFDA59052A12F862007D88FB /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E43529384E2300DA46EB /* FeedCacheTestHelpers.swift */; };
 		EFDA59062A12F872007D88FB /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E43729384FC300DA46EB /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
@@ -189,6 +190,7 @@
 		EFC04AD4292495BB008D8211 /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 		EFC4FB6529BB85C4007CF4A0 /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
 		EFCCB7542CA27CAC004C2AC4 /* UITableViewCell+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Dequeueing.swift"; sourceTree = "<group>"; };
+		EFCCB7582CA27D84004C2AC4 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		EFE25A742AD05049006C2CDF /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -424,6 +426,7 @@
 			children = (
 				EF7B73FC2C9BEBF900D576D6 /* Feed.storyboard */,
 				EF5174B92C816A12007F1B7E /* FeedImageCell.swift */,
+				EFCCB7582CA27D84004C2AC4 /* UIImageView+Animations.swift */,
 				EF5174BA2C816A12007F1B7E /* UIView+Shimmering.swift */,
 				EFCCB7542CA27CAC004C2AC4 /* UITableViewCell+Dequeueing.swift */,
 				EF7B73FE2C9BEC5400D576D6 /* Feed.xcassets */,
@@ -816,6 +819,7 @@
 				EF5174BD2C816A12007F1B7E /* UIView+Shimmering.swift in Sources */,
 				EF2508292C9A7AF800F16CBD /* FeedImagePresenter.swift in Sources */,
 				EFCCB7552CA27CBB004C2AC4 /* UITableViewCell+Dequeueing.swift in Sources */,
+				EFCCB7592CA27D85004C2AC4 /* UIImageView+Animations.swift in Sources */,
 				EF5174BC2C816A12007F1B7E /* FeedImageCell.swift in Sources */,
 				EF7EF1332C6EF73B0074F298 /* FeedViewController.swift in Sources */,
 				EF7BE22C2C8AB1D00044F601 /* FeedImageViewModel.swift in Sources */,
