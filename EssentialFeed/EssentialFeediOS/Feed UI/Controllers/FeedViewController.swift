@@ -52,6 +52,12 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
         return cellController(forRowAt: indexPath).view(in: tableView)
     }
 
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let cellController = cellController(forRowAt: indexPath)
+        (cell as? FeedImageCell).map(cellController.setCell)
+        cellController.preload()
+    }
+
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelCellController(forRowAt: indexPath)
     }

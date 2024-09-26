@@ -26,6 +26,10 @@ final class FeedImageCellController: FeedImageView {
         return cell!
     }
 
+    func setCell(_ cell: FeedImageCell) {
+        self.cell = cell
+    }
+
     func preload() {
         delegate.didRequestImage()
     }
