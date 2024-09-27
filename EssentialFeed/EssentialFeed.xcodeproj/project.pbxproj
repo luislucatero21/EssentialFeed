@@ -57,6 +57,7 @@
 		EF7EF12C2C3906F80074F298 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AABBF0E28F5212600373419 /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF7EF1312C6DAADE0074F298 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A22B8A429078A1D009C86C4 /* XCTestCase+MemoryLeakTracking.swift */; };
 		EF7EF1332C6EF73B0074F298 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7EF1322C6EF73B0074F298 /* FeedViewController.swift */; };
+		EF831F7B2CA6811A003B0B22 /* Feed.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EF831F7A2CA6811A003B0B22 /* Feed.xcstrings */; };
 		EF8C93F429C8B29100600F29 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C93F329C8B29100600F29 /* CoreDataHelpers.swift */; };
 		EF8C93F629C8B36000600F29 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C93F529C8B36000600F29 /* ManagedCache.swift */; };
 		EF8C93F829C8B37300600F29 /* ManagedFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C93F729C8B37300600F29 /* ManagedFeedImage.swift */; };
@@ -176,6 +177,7 @@
 		EF7BE22D2C901B630044F601 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		EF7EF1282C37B9F40074F298 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		EF7EF1322C6EF73B0074F298 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EF831F7A2CA6811A003B0B22 /* Feed.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Feed.xcstrings; sourceTree = "<group>"; };
 		EF8C93F329C8B29100600F29 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		EF8C93F529C8B36000600F29 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
 		EF8C93F729C8B37300600F29 /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 				EF7BE22D2C901B630044F601 /* FeedPresenter.swift */,
 				EF7BE22B2C8AB1D00044F601 /* FeedImageViewModel.swift */,
 				EF2508282C9A7AF500F16CBD /* FeedImagePresenter.swift */,
+				EF831F7A2CA6811A003B0B22 /* Feed.xcstrings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF831F7B2CA6811A003B0B22 /* Feed.xcstrings in Resources */,
 				EF7B73FD2C9BEBFA00D576D6 /* Feed.storyboard in Resources */,
 				EF7B73FF2C9BEC5400D576D6 /* Feed.xcassets in Resources */,
 			);
@@ -985,6 +989,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1042,6 +1047,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
