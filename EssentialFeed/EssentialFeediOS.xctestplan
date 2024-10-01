@@ -4,7 +4,12 @@
       "id" : "B176F7CD-FACA-4E92-8C45-62396339C03B",
       "name" : "Test Scheme Action",
       "options" : {
-
+        "environmentVariableEntries" : [
+          {
+            "key" : "MTC_CRASH_ON_REPORT",
+            "value" : "1"
+          }
+        ]
       }
     }
   ],
